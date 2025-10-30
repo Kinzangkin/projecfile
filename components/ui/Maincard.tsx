@@ -1,13 +1,14 @@
 "use client";
-import React from "react";
+import React, {useState, useEffect} from "react";
+import { shortenLink } from "@/utils/adtival";
 
 interface Maincardprops {
   title: string;
   media: string;
   link: string;
+  type: string;
 }
 
-// Fungsi untuk konversi link YouTube
 function convertToEmbed(url: string): string {
   if (url.includes("youtu.be")) {
     const videoId = url.split("youtu.be/")[1].split("?")[0];
@@ -20,7 +21,17 @@ function convertToEmbed(url: string): string {
   return url;
 }
 
-function Maincard({ title, media, link }: Maincardprops) {
+function Maincard({ title, media, link, type }: Maincardprops) {
+    const [shortLink, setShortLink] = useState(link);
+
+    useEffect(() => {
+    async function shorten() {
+      const newLink = await shortenLink(link);
+      setShortLink(newLink);
+    }
+    shorten();
+  }, [link]);
+
   return (
     <div className="space-y-5 bg-zinc-900 flex flex-col justify-center">
       <div>
@@ -35,10 +46,10 @@ function Maincard({ title, media, link }: Maincardprops) {
       <div className="text-sm m-5 space-y-2">
         <div className="flex justify-between">
             <p className="flex w-50">{title}</p>
-            <div className="bg-purple-600 px-1 rounded-sm">Am</div>
+            <div className="bg-purple-600 px-1 rounded-sm">{type}</div>
         </div>
         <a
-          href={link}
+          href={shortLink}
           target="_blank"
           rel="noopener noreferrer"
           className=" hover:underline border bg-purple-600 px-5 py-1 rounded-sm hover:bg-blue-400 hover:text-white"

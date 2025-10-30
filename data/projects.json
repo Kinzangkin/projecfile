@@ -1,16 +1,30 @@
 [
-  {
-    "id": 1,
-    "title": "Terakomari Project File",
-    "media": "https://youtu.be/0DzZKHpfzSs?si=VWZS40UWxERFWJY6",
-    "link": "https://drive.google.com/file/d/xxx/view",
-    "type": "am"
-  },
-  {
-    "id": 2,
-    "title": "Makima Edit Template",
-    "media": "https://youtu.be/abc123",
-    "link": "https://shorturl.at/makima",
-    "type": "am"
-  }
+    {
+        "id": 4,
+        "title": "special pack edit",
+        "media": "https://youtu.be/GO1SM1GhvNM",
+        "link": "https://drive.google.com/drive/folders/10w7tEdE3kK4Or9mEZnMKKQ__-VvbTFNh?usp=drive_link",
+        "type": "All"
+    },
+    {
+        "id": 2,
+        "title": "Terakomari Project File",
+        "media": "https://youtu.be/0DzZKHpfzSs?si=VWZS40UWxERFWJY6",
+        "link": "https://drive.google.com/drive/folders/1QUU8pzN06P0OW0Mjx_Z4K9WohU3kUxQq?usp=drive_link",
+        "type": "Am"
+    },
+    {
+        "id": 3,
+        "title": "vestia zeta - 4ever",
+        "media": "https://youtu.be/Huw8FXqzYR8?si=86E2oN1W3C_j5Bd_",
+        "link": "https://drive.google.com/drive/folders/1AFGT0zU1N_IRSgOeXVMJnJz8sNuCziRV?usp=drive_link",
+        "type": "Blurrr"
+    },
+    {
+        "id": 1,
+        "title": "Angostura nakano nino",
+        "media": "https://youtu.be/HygrNd8rPdc?si=gJ18q306kZ7NL1La",
+        "link": "https://drive.google.com/drive/folders/1VJfJOofeL5-XF_lWXXjl4vKhWYp8TEVi?usp=drive_link",
+        "type": "Ae"
+    }
 ]

@@ -8,8 +8,8 @@ function Main() {
 
   const tabs = [
     { id: "all", label: "All Project" },
-    { id: "am", label: "Alight Motion" },
-    { id: "ae", label: "After Effect" },
+    { id: "Am", label: "Alight Motion" },
+    { id: "Ae", label: "After Effect" },
   ];
 
   const filteredProjects =
@@ -33,14 +33,14 @@ function Main() {
         ))}
         </div>
 
-
-        <div className='space-y-5'>
+        <div className='grid sm:grid-cols-4 gap-5'>
             {filteredProjects.map((item) => (
             <Maincard 
             key={item.id}
-            title='Terakomari project file'
-            media={"https://youtu.be/0DzZKHpfzSs?si=VWZS40UWxERFWJY6"}
-            link=''
+            title={item.title}
+            media={item.media}
+            link={item.link}
+            type={item.type}
             />
             ))}
         </div>

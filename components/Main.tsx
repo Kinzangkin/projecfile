@@ -10,6 +10,8 @@ function Main() {
     { id: "all", label: "All Project" },
     { id: "Am", label: "Alight Motion" },
     { id: "Ae", label: "After Effect" },
+    { id: "Blur", label: "Blurrr"},
+    { id: "Twix", label: "twixtor"},
   ];
 
   const filteredProjects =
@@ -24,11 +26,20 @@ function Main() {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`relative z-10 px-5 py-2 text-sm font-medium rounded-full transition-all ${
+            className={`relative z-10 mx-5 py-2 text-sm font-medium rounded-full transition-all cursor-pointer hover:text-purple-400 ${
               activeTab === tab.id ? "text-white" : "text-gray-400"
             }`}
           >
+            <span className='hidden sm:inline'>
             {tab.label}
+            </span>
+            <span className='inline sm:hidden'>
+              {tab.id === "Am" ? "AM " 
+              : tab.id === "Ae" ? "Ae" 
+              : tab.id === "Blur" ? "blurrr" 
+              : tab.id === "Twix" ? "twixtor" 
+              : "All" }
+            </span>
           </button>
         ))}
         </div>

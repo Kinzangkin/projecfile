@@ -10,6 +10,7 @@ interface Maincardprops {
   type: string;
 }
 
+
 function Maincard({ title, media, link, type }: Maincardprops) {
   const [shortLink, setShortLink] = useState(link);
 
@@ -21,24 +22,30 @@ function Maincard({ title, media, link, type }: Maincardprops) {
     shorten();
   }, [link]);
 
-  // Ambil video ID dari YouTube
-  const videoId = media.includes("youtu")
-    ? media.includes("watch?v=")
+  // Tentukan sumber thumbnail berdasarkan URL
+  let thumbnailUrl = "";
+  let youtubeUrl = "";
+
+  if (media.includes("youtu")) {
+    // Ambil video ID dari YouTube
+    const videoId = media.includes("watch?v=")
       ? media.split("watch?v=")[1].split("&")[0]
-      : media.split("youtu.be/")[1].split("?")[0]
-    : null;
+      : media.split("youtu.be/")[1].split("?")[0];
 
-  // URL thumbnail YouTube
-  const thumbnailUrl = videoId
-    ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
-    : "";
+    thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
+  } else if (media.includes("drive.google.com")) {
+    // Ambil ID file dari Google Drive
+    const fileIdMatch = media.match(/\/d\/(.*?)\//);
+    const fileId = fileIdMatch ? fileIdMatch[1] : "";
+    thumbnailUrl = `https://drive.google.com/thumbnail?id=${fileId}`;
+    youtubeUrl = `https://drive.google.com/uc?export=view&id=${fileId}`;
+  }
 
-  // URL video YouTube asli
-  const youtubeUrl = videoId ? `https://www.youtube.com/watch?v=${videoId}` : "";
 
   return (
     <div className="space-y-5 bg-zinc-900 flex flex-col justify-center">
-      {videoId && (
+      {thumbnailUrl && (
         <a href={youtubeUrl} target="_blank" rel="noopener noreferrer">
           <div className="relative h-44 w-80 cursor-pointer">
             <Image

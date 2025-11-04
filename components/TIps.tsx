@@ -10,9 +10,9 @@ function TIps() {
         <div className='text-sm'>
             <p className='mx-2 text-purple-400'>Tips Download</p>
             <ul>
-            <li className='text-sm'><span className='text-xl mx-2'>•</span>Tiap link menggunakan short-link dengan iklan</li>
-            <li className='text-sm'><span className='text-xl mx-2'>•</span>Tetap pada page utama jangan berpidah page</li>
-            <li className='text-sm'><span className='text-xl mx-2'>•</span>Jika gagal, coba reload halaman</li>
+            <li className='text-sm'><span className='text-xl mx-2'>•</span>Each link uses a short link with ads</li>
+            <li className='text-sm'><span className='text-xl mx-2'>•</span>Stay on the main page, do not switch pages</li>
+            <li className='text-sm'><span className='text-xl mx-2'>•</span>If it fails, try reloading the page</li>
             </ul>
         </div>
     </div>

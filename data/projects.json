@@ -18,7 +18,7 @@
         "title": "vestia zeta - 4ever",
         "media": "https://youtu.be/Huw8FXqzYR8?si=86E2oN1W3C_j5Bd_",
         "link": "https://drive.google.com/drive/folders/1AFGT0zU1N_IRSgOeXVMJnJz8sNuCziRV?usp=drive_link",
-        "type": "Blurrr"
+        "type": "Blur"
     },
     {
         "id": 4,
@@ -89,5 +89,40 @@
         "media": "https://youtu.be/HaSdD19pk-o?si=vNJPPP4wHCHBAMQa",
         "link": "https://safefileku.com/download/ERyhXVw6PkTYK4wP",
         "type": "Am"
+    },
+    {
+        "id": 14,
+        "title": "Rion Enomoto",
+        "media": "https://drive.google.com/file/d/1uebW1LbWutFhyJBaXggMORAVylmLBm8W/view?usp=drive_link",
+        "link": "https://drive.google.com/file/d/1uebW1LbWutFhyJBaXggMORAVylmLBm8W/view?usp=drive_link",
+        "type": "Twix"
+    },
+    {
+        "id": 15,
+        "title": "Yozakura Mutsumi",
+        "media": "https://drive.google.com/file/d/1vKW56LpnIBDHa-NwQU2-3_g-WMmbhMWa/view?usp=drive_link",
+        "link": "https://drive.google.com/file/d/1vKW56LpnIBDHa-NwQU2-3_g-WMmbhMWa/view?usp=drive_link",
+        "type": "Twix"
+    },
+    {
+        "id": 16,
+        "title": "Nakano nino S2",
+        "media": "https://drive.google.com/file/d/1Dj8vI6ldvayhESciE1JutbAdk4e4IQsD/view?usp=drive_link",
+        "link": "https://drive.google.com/file/d/1Dj8vI6ldvayhESciE1JutbAdk4e4IQsD/view?usp=drive_link",
+        "type": "Twix"
+    },
+    {
+        "id": 17,
+        "title": "Himari Inzuka",
+        "media": "https://drive.google.com/file/d/1VE9b5H66N7RpZ7pin4WZwcfNGxD1-J5g/view?usp=drive_link",
+        "link": "https://drive.google.com/file/d/1VE9b5H66N7RpZ7pin4WZwcfNGxD1-J5g/view?usp=drive_link",
+        "type": "Twix"
+    },
+    {
+        "id": 18,
+        "title": "Arina",
+        "media": "https://drive.google.com/file/d/1RCojdkIo2XAFyiuHO6PKmBlkBhBatek7/view?usp=drive_link",
+        "link": "https://drive.google.com/file/d/1RCojdkIo2XAFyiuHO6PKmBlkBhBatek7/view?usp=drive_link",
+        "type": "Twix"
     }
 ]

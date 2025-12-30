@@ -26,9 +26,14 @@ function Maincard({ title, media, link, type }: Maincardprops) {
   let youtubeUrl = "";
 
   if (media.includes("youtu")) {
-    const videoId = media.includes("watch?v=")
-      ? media.split("watch?v=")[1].split("&")[0]
-      : media.split("youtu.be/")[1].split("?")[0];
+    let videoId = "";
+    if (media.includes("watch?v=")) {
+      videoId = media.split("watch?v=")[1].split("&")[0];
+    } else if (media.includes("youtu.be/")) {
+      videoId = media.split("youtu.be/")[1].split("?")[0];
+    } else if (media.includes("shorts/")) {
+      videoId = media.split("shorts/")[1].split("?")[0];
+    }
 
     thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
     youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;

@@ -22,12 +22,10 @@ function Maincard({ title, media, link, type }: Maincardprops) {
     shorten();
   }, [link]);
 
-  // Tentukan sumber thumbnail berdasarkan URL
   let thumbnailUrl = "";
   let youtubeUrl = "";
 
   if (media.includes("youtu")) {
-    // Ambil video ID dari YouTube
     const videoId = media.includes("watch?v=")
       ? media.split("watch?v=")[1].split("&")[0]
       : media.split("youtu.be/")[1].split("?")[0];
@@ -35,7 +33,6 @@ function Maincard({ title, media, link, type }: Maincardprops) {
     thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
     youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
   } else if (media.includes("drive.google.com")) {
-    // Ambil ID file dari Google Drive
     const fileIdMatch = media.match(/\/d\/(.*?)\//);
     const fileId = fileIdMatch ? fileIdMatch[1] : "";
     thumbnailUrl = `https://drive.google.com/thumbnail?id=${fileId}`;
